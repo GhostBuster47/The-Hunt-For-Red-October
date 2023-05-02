@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <script src="Battleship.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"   integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="   crossorigin="anonymous"></script>
+
+    </head>
+    
+    <body>
+        <audio id = "EpicMusic">
+            <source src="EpicMusic.mp3" type="audio/mpeg">
+        </audio>
+        <audio id = "TorpedoHit">
+            <source src="TorpedoHit.mp3" type="audio/mpeg">
+        </audio>
+        <audio id = "WaterSplash">
+            <source src="WaterSplash.mp3" type="audio/mpeg">
+        </audio>
+        <audio id = "RussianMan">
+            <source src="RussianMan.mp3" type="audio/mpeg">
+        </audio>
+        
+    <h2>The hunt for</h2>
+    <h1>RED october</h1>
+
+    <div id = "boardContainer">
+        <div id = "numbers">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+            <span>10</span>
+            <span>11</span>
+            <span>12</span>
+            <span>13</span>
+            <span>14</span>
+            <span>15</span>
+            <span>16</span>
+            <span>17</span>
+            <span>18</span>
+            <span>19</span>
+            <span>20</span>
+        </div>
+        <div id = "letters">ABCDEFGHIJKLMNOPQRST</div>
+        <div id = "board"></div>
+        
+        <div id = "controls">
+            <input id = "coordinate" type="text">
+            <button id = "fire" onclick="GameControls1.shootTorpedo($('#coordinate').val());">FIRE</button>
+        </div>
+        <h3 id = "GameOverBox">
+            <span id = "GameOver">Game over</span>
+            <span>Go fuck yourself russian warship! </span>
+        </h3>
+        <h3 id = "StartGameBox">
+            <button id = "StartGame" onclick="document.getElementById('EpicMusic').play(); $('#StartGameBox').hide(); GameControls1.startGame()">Start game</button>
+        </h3>
+    </div>
+    
+    
+
+    </body>
+
+</html>
